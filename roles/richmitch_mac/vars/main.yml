@@ -6,7 +6,7 @@ homebrew_packages:
 
 homebrew_cask_packages:
 - atom
-- blue-jeans
+- bluejeans
 - discord
 - dropbox
 - font-redhat

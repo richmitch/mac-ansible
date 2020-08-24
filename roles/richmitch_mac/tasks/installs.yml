@@ -19,7 +19,8 @@
 - name: Install homebrew cask packages
   homebrew_cask:
     name: '{{ item }}'
-    state: installed
+    state: latest
+    install_options: force
   loop: '{{ homebrew_cask_packages }}'
   tags:
   - brew
