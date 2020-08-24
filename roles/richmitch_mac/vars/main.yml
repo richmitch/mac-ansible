@@ -1,0 +1,19 @@
+# roles/richmitch_mac/vars/main.yml
+
+homebrew_packages:
+- maven
+- openjdk
+
+homebrew_cask_packages:
+- atom
+- blue-jeans
+- discord
+- dropbox
+- font-redhat
+- github
+- google-chrome
+- microsoft-teams
+- station
+- virtualbox
+- viscosity
+- vlc
