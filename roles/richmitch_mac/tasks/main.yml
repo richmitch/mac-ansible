@@ -7,4 +7,4 @@
   import_tasks: tidy.yml
 
 - name: Set app defaults
-  import_tasks: defaults.yml
+  import_tasks: app-defaults.yml
