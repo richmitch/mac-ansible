@@ -2,3 +2,9 @@
 
 - name: Install things
   import_tasks: installs.yml
+
+- name: Tidy things up how I like them
+  import_tasks: tidy.yml
+
+- name: Set app defaults
+  import_tasks: defaults.yml

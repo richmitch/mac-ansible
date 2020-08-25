@@ -17,3 +17,50 @@ homebrew_cask_packages:
 - virtualbox
 - viscosity
 - vlc
+
+dockitems_to_remove:
+- Launchpad
+- Mail
+- Safari
+- Contacts
+- Notes
+- Reminders
+- Maps
+- Photos
+- FaceTime
+- iTunes
+- iBooks
+- System Preferences
+- Calendar
+- Adobe Acrobat Reader DC
+- Sonos
+- Dropbox
+
+dockitems_to_persist:
+  - name: Messages
+    path: "/Applications/Messages.app"
+    pos: 1
+  - name: App Store
+    path: "/Applications/App Store.app"
+    pos: 2
+  - name: Google Chrome
+    path: "/Applications/Google Chrome.app"
+    pos: 3
+  - name: 1Password 6
+    path: "/Applications/1Password 6.app"
+    pos: 4
+  - name: Terminal
+    path: "/Applications/Utilities/Terminal.app"
+    pos: 5
+  - name: BlueJeans
+    path: "/Applications/BlueJeans.app"
+    pos: 6
+  - name: Station
+    path: "/Applications/Station.app"
+    pos: 7
+  - name: GitHub Desktop
+    path: "/Applications/Git Hub Desktop.app"
+    pos: 8
+  - name: Atom
+    path: "/Applications/Atom.app"
+    pos: 9
