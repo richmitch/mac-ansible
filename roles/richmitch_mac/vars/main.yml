@@ -13,6 +13,7 @@ homebrew_cask_packages:
 - github
 - google-chrome
 - microsoft-teams
+- postman
 - station
 - virtualbox
 - viscosity
