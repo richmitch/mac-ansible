@@ -7,7 +7,6 @@ homebrew_packages:
 - openjdk
 
 homebrew_cask_packages:
-#- atom
 - bluejeans
 - discord
 - dropbox
@@ -16,9 +15,9 @@ homebrew_cask_packages:
 - google-chrome
 - microsoft-teams
 - postman
-#- station
 - virtualbox
 - viscosity
+- visual-studio-code
 - vlc
 
 dockitems_to_remove:
@@ -58,12 +57,9 @@ dockitems_to_persist:
   - name: BlueJeans
     path: "/Applications/BlueJeans.app"
     pos: 6
-  - name: Station
-    path: "/Applications/Station.app"
-    pos: 7
-  - name: GitHub Desktop
+   - name: GitHub Desktop
     path: "/Applications/Git Hub Desktop.app"
+    pos: 7
+ - name: Visual Studio Code
+    path: "/Applications/Visual Studio Code.app"
     pos: 8
-  - name: Atom
-    path: "/Applications/Atom.app"
-    pos: 9
