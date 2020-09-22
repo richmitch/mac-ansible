@@ -1,7 +1,5 @@
 # roles/richmitch_mac/vars/main.yml
 
-default_mouse_tracking: 5.0
-
 homebrew_packages:
 - maven
 - openjdk
@@ -17,7 +15,7 @@ homebrew_cask_packages:
 - postman
 - virtualbox
 - viscosity
-- visual-studio-code
+#- visual-studio-code
 - vlc
 
 dockitems_to_remove:
@@ -57,9 +55,31 @@ dockitems_to_persist:
   - name: BlueJeans
     path: "/Applications/BlueJeans.app"
     pos: 6
-   - name: GitHub Desktop
+  - name: GitHub Desktop
     path: "/Applications/Git Hub Desktop.app"
     pos: 7
- - name: Visual Studio Code
+  - name: Visual Studio Code
     path: "/Applications/Visual Studio Code.app"
     pos: 8
+
+mac_default_settings:
+  - name: Mouse tracking speed
+    namespace: -g
+    key: com.apple.mouse.scaling
+    value: -float 5.0
+  - name: Scroll direction
+    namespace: -g
+    key: com.apple.swipescrolldirection
+    value: -booel false
+  - name: Dock orientation
+    namespace: 
+    key: com.apple.dock orientation
+    value: -string bottom
+  - name: Dock size
+    namespace: 
+    key: com.apple.dock largesize
+    value: -int 90
+  - name: Dock autohide
+    namespace: 
+    key: com.apple.dock autohide
+    value: -bool true

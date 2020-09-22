@@ -13,5 +13,7 @@
   shell: dockutil --move '{{ item.name }}' --position {{ item.pos }}
   with_items: '{{ dockitems_to_persist }}'
 
-- name: Set mouse tracking speed
-  shell: defaults write -g com.apple.mouse.scaling '{{ default_mouse_tracking }}'
+- name: Set Mac defaults
+  shell: defaults write '{{ item.namespace }}' '{{ item.key }}' '{{ item.value }}'
+  with_items: '{{ mac_default_settings }}'
+
