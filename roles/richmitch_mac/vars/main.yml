@@ -1,5 +1,7 @@
 # roles/richmitch_mac/vars/main.yml
 
+default_mouse_tracking: 5.0
+
 homebrew_packages:
 - maven
 - openjdk

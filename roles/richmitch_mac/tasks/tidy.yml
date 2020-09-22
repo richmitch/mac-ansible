@@ -12,3 +12,6 @@
 - name: Fix Dock item order
   shell: dockutil --move '{{ item.name }}' --position {{ item.pos }}
   with_items: '{{ dockitems_to_persist }}'
+
+- name: Set mouse tracking speed
+  shell: defaults write -g com.apple.mouse.scaling '{{ default_mouse_tracking }}'
