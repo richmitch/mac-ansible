@@ -7,7 +7,7 @@ homebrew_packages:
 - openjdk
 
 homebrew_cask_packages:
-- atom
+#- atom
 - bluejeans
 - discord
 - dropbox
@@ -16,7 +16,7 @@ homebrew_cask_packages:
 - google-chrome
 - microsoft-teams
 - postman
-- station
+#- station
 - virtualbox
 - viscosity
 - vlc
