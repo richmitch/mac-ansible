@@ -2,9 +2,12 @@
 
 - name: Install things
   import_tasks: installs.yml
+  when: do_installs
 
 - name: Tidy things up how I like them
   import_tasks: tidy.yml
+  when: do_tidy
 
 - name: Set app defaults
   import_tasks: app-defaults.yml
+  when: do_appdefaults

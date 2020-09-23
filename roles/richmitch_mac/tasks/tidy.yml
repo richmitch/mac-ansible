@@ -1,5 +1,5 @@
 # roles/richmitch_mac/tasks/tidy.yml
----
+
 - name: Cleanup the Dock
   shell: dockutil --remove '{{ item }}'
   ignore_errors: true
@@ -14,6 +14,11 @@
   with_items: '{{ dockitems_to_persist }}'
 
 - name: Set Mac defaults
-  shell: defaults write '{{ item.namespace }}' '{{ item.key }}' '{{ item.value }}'
+  osx_defaults:
+    domain: '{{ item.domain }}'
+    key: '{{ item.key }}'
+    type: '{{ item.type }}'
+    value: '{{ item.value }}'
+    state: present
   with_items: '{{ mac_default_settings }}'
 

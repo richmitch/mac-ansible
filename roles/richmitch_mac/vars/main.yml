@@ -1,5 +1,9 @@
 # roles/richmitch_mac/vars/main.yml
 
+do_installs: false
+do_tidy: true
+do_appdefaults: false
+
 homebrew_packages:
 - maven
 - openjdk
@@ -64,22 +68,27 @@ dockitems_to_persist:
 
 mac_default_settings:
   - name: Mouse tracking speed
-    namespace: -g
+    domain: -g
     key: com.apple.mouse.scaling
-    value: -float 5.0
+    type: string
+    value: 5.0
   - name: Scroll direction
-    namespace: -g
+    domain: -g
     key: com.apple.swipescrolldirection
-    value: -booel false
+    type: string
+    value: false
   - name: Dock orientation
-    namespace: 
+    domain: 
     key: com.apple.dock orientation
-    value: -string bottom
+    type: string
+    value: bottom
   - name: Dock size
-    namespace: 
+    domain: 
     key: com.apple.dock largesize
-    value: -int 90
+    type: string
+    value: 90
   - name: Dock autohide
-    namespace: 
+    domain: 
     key: com.apple.dock autohide
-    value: -bool true
+    type: string
+    value: true
