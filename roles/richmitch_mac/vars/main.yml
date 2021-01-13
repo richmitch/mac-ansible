@@ -1,7 +1,7 @@
 # roles/richmitch_mac/vars/main.yml
 
 do_installs: false
-do_tidy: true
+do_tidy: false
 do_appdefaults: false
 
 homebrew_packages:
@@ -15,12 +15,15 @@ homebrew_cask_packages:
 - font-redhat
 - github
 - google-chrome
+- macs-fan-control
 - microsoft-teams
 - postman
+- signal
 - virtualbox
 - viscosity
-#- visual-studio-code
+- visual-studio-code
 - vlc
+- whatsapp
 
 dockitems_to_remove:
 - Launchpad
@@ -70,12 +73,12 @@ mac_default_settings:
   - name: Mouse tracking speed
     domain: -g
     key: com.apple.mouse.scaling
-    type: string
+    type: float
     value: 5.0
   - name: Scroll direction
     domain: -g
     key: com.apple.swipescrolldirection
-    type: string
+    type: bool
     value: true
   - name: Dock orientation
     domain: 
@@ -101,4 +104,9 @@ mac_default_settings:
     domain: 
     key: com.apple.finder FXPreferredGroupBy
     type: string
-    value: Date Modified
+    value: "Date Modified"
+  - name: Finder arrange Group By
+    domain: 
+    key: com.apple.finder FXArrangeGroupViewBy
+    type: string
+    value: "Date Modified"

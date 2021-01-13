@@ -21,4 +21,3 @@
     value: '{{ item.value }}'
     state: present
   with_items: '{{ mac_default_settings }}'
-
