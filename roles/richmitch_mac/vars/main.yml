@@ -1,8 +1,8 @@
 # roles/richmitch_mac/vars/main.yml
 
-do_installs: false
-do_tidy: false
-do_appdefaults: false
+do_installs: true
+do_tidy: true
+do_appdefaults: true
 
 homebrew_packages:
 - maven
@@ -19,6 +19,7 @@ homebrew_cask_packages:
 - microsoft-teams
 - postman
 - signal
+- steam
 - virtualbox
 - viscosity
 - visual-studio-code

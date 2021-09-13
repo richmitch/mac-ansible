@@ -6,24 +6,24 @@
     state: latest
     update_homebrew: true
   tags:
-  - brew
+    - brew
 
 - name: Install homebrew packages
   homebrew:
-    name: '{{ item }}'
+    name: "{{ item }}"
     state: latest
-  loop: '{{ homebrew_packages }}'
+  loop: "{{ homebrew_packages }}"
   tags:
-  - brew
+    - brew
 
 - name: Install homebrew cask packages
   homebrew_cask:
-    name: '{{ item }}'
+    name: "{{ item }}"
     state: latest
-#    install_options: force
-  loop: '{{ homebrew_cask_packages }}'
+  #    install_options: force
+  loop: "{{ homebrew_cask_packages }}"
   tags:
-  - brew
+    - brew
 
 - name: homebrew cleanup
   command: brew cleanup
