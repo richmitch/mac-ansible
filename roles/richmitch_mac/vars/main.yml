@@ -9,7 +9,7 @@ homebrew_packages:
 - openjdk
 
 homebrew_cask_packages:
-- bluejeans
+- brave-browser
 - discord
 - dropbox
 - font-redhat
