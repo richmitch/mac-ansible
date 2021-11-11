@@ -55,20 +55,17 @@ dockitems_to_persist:
     path: "/Applications/Google Chrome.app"
     pos: 3
   - name: 1Password 6
-    path: "/Applications/1Password 6.app"
+    path: "/Applications/1Password 7.app"
     pos: 4
   - name: Terminal
     path: "/Applications/Utilities/Terminal.app"
     pos: 5
-  - name: BlueJeans
-    path: "/Applications/BlueJeans.app"
-    pos: 6
   - name: GitHub Desktop
     path: "/Applications/Git Hub Desktop.app"
-    pos: 7
+    pos: 6
   - name: Visual Studio Code
     path: "/Applications/Visual Studio Code.app"
-    pos: 8
+    pos: 7
 
 mac_default_settings:
   - name: Mouse tracking speed
