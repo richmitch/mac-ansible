@@ -19,30 +19,36 @@ homebrew_cask_packages:
 - microsoft-teams
 - postman
 - signal
+- sonos
 - steam
 - virtualbox
-- viscosity
 - visual-studio-code
 - vlc
 - whatsapp
 
 dockitems_to_remove:
+- Adobe Acrobat Reader DC
+- BlueJeans
+- Calendar
+- Contacts
+- Dropbox
+- FaceTime
+- iBooks
+- iTunes
+- Keynote
 - Launchpad
 - Mail
-- Safari
-- Contacts
-- Notes
-- Reminders
+- Managed Software Center
 - Maps
+- News
+- Notes
+- Numbers
+- Pages
 - Photos
-- FaceTime
-- iTunes
-- iBooks
+- Reminders
+- Safari
 - System Preferences
-- Calendar
-- Adobe Acrobat Reader DC
-- Sonos
-- Dropbox
+- TV
 
 dockitems_to_persist:
   - name: Messages
@@ -61,7 +67,7 @@ dockitems_to_persist:
     path: "/Applications/Utilities/Terminal.app"
     pos: 5
   - name: GitHub Desktop
-    path: "/Applications/Git Hub Desktop.app"
+    path: "/Applications/GitHub Desktop.app"
     pos: 6
   - name: Visual Studio Code
     path: "/Applications/Visual Studio Code.app"
