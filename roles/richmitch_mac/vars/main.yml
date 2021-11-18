@@ -1,16 +1,67 @@
 # roles/richmitch_mac/vars/main.yml
 
+do_update_homebrew: no
+
 do_installs: true
-do_tidy: true
-do_appdefaults: true
+do_tidy: false
+do_appdefaults: false
 
 homebrew_packages:
 - maven
 - openjdk
 
+install_apps:
+  - name: "Brave Browser"
+    cask: brave-browser
+    dock: false
+    path: "/Applications/Brave Browser.app"
+  - name: "Dropbox"
+    cask: dropbox
+    dock: false
+    path: "/Applications/Dropbox.app"
+  - name: "GitHub Desktop"
+    cask: github
+    dock: true
+    path: "/Applications/GitHub Desktop.app"
+  - name: "Google Chrome"
+    cask: google-chrome
+    dock: true
+    path: "/Applications/Google Chrome.app"
+  - name: "Microsoft Teams"
+    cask: microsoft-teams
+    dock: false
+    path: "/Applications/Microsoft Teams.app"
+  - name: "Postman"
+    cask: postman
+    dock: false
+    path: "/Applications/Postman.app"
+  - name: "Sonos"
+    cask: sonos
+    dock: false
+    path: "/Applications/Sonos.app"
+  - name: "Virtual Box"
+    cask: virtualbox
+    dock: false
+    path: "/Applications/VirtualBox.app"
+  - name: "Visual Studio Code"
+    cask: visual-studio-code
+    dock: true
+    path: "/Applications/Visual Studio Code.app"
+  - name: "VLC"
+    cask: vlc
+    dock: false
+    path: "/Applications/VLC.app"
+  - name: "WhatsApp"
+    cask: whatsapp
+    dock: false
+    path: "/Applications/WhatsApp.app"
+
+install_fonts:
+  - name: "Red Hat Fonts"
+    cask: font-redhat
+
 homebrew_cask_packages:
 - brave-browser
-- discord
 - dropbox
 - font-redhat
 - github

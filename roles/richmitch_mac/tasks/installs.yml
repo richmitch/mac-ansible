@@ -1,10 +1,10 @@
 # roles/richmitch_mac/tasks/installs.yml
 
-- name: Update homebrew
+- name: Update homebrew by reinstalling git
   homebrew:
     name: git
     state: latest
-    update_homebrew: true
+    update_homebrew: yes
   tags:
     - brew
 
@@ -17,11 +17,10 @@
     - brew
 
 - name: Install homebrew cask packages
-  homebrew_cask:
-    name: "{{ item }}"
+  homebrew_cask: 
+    name: "{{ item.cask }}"
     state: latest
-  #    install_options: force
-  loop: "{{ homebrew_cask_packages }}"
+  loop: "{{ install_apps }}"
   tags:
     - brew
 
