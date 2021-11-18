@@ -1,17 +1,20 @@
 # roles/richmitch_mac/tasks/tidy.yml
 
 - name: Cleanup the Dock
-  shell: dockutil --remove '{{ item }}'
+  shell: dockutil --remove '{{ item.name }}'
   ignore_errors: true
-  with_items: '{{ dockitems_to_remove }}'
+  with_items: '{{ apps }}'
+  when: item.dock.state == "absent"
 
 - name: Add items to Dock if they don't exist
   shell: dockutil --find '{{ item.name }}' || dockutil --add '{{ item.path }}'
-  with_items: '{{ dockitems_to_persist }}'
+  with_items: '{{ apps }}'
+  when: item.dock.state == "present"
 
 - name: Fix Dock item order
-  shell: dockutil --move '{{ item.name }}' --position {{ item.pos }}
-  with_items: '{{ dockitems_to_persist }}'
+  shell: dockutil --move '{{ item.name }}' --position {{ item.dock.pos }}
+  with_items: '{{ apps }}'
+  when: item.dock.state == "present"
 
 - name: Set Mac defaults
   osx_defaults:

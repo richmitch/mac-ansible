@@ -2,124 +2,156 @@
 
 do_update_homebrew: no
 
-do_installs: true
-do_tidy: false
+do_installs: false
+do_tidy: true
 do_appdefaults: false
 
 homebrew_packages:
 - maven
 - openjdk
 
-install_apps:
-  - name: "Brave Browser"
+apps:
+  - name: Adobe Acrobat Reader DC
+    dock:
+      state: absent
+  - name: App Store
+    dock:
+      state: present
+      pos: 2
+    path: "/Applications/App Store.app"
+  - name: BlueJeans
+    dock:
+      state: absent    
+  - name: Brave Browser
     cask: brave-browser
-    dock: false
+    dock:
+      state: present
+      pos: 3
     path: "/Applications/Brave Browser.app"
-  - name: "Dropbox"
+  - name: Calendar
+    dock:
+      state: absent
+  - name: Contacts
+    dock:
+      state: absent      
+  - name: Dropbox
     cask: dropbox
-    dock: false
+    dock: 
+      state: absent
     path: "/Applications/Dropbox.app"
-  - name: "GitHub Desktop"
+  - name: Facetime
+    dock:
+      state: absent
+  - name: GitHub Desktop
     cask: github
-    dock: true
+    dock:
+      state: present
+      pos: 5
     path: "/Applications/GitHub Desktop.app"
-  - name: "Google Chrome"
+  - name: Google Chrome
     cask: google-chrome
-    dock: true
+    dock: 
+      state: absent
     path: "/Applications/Google Chrome.app"
-  - name: "Microsoft Teams"
+  - name: iBooks
+    dock:
+      state: absent
+  - name: iTunes
+    dock:
+      state: absent
+  - name: Keynote
+    dock:
+      state: absent
+  - name: Launchpad
+    dock:
+      state: absent
+  - name: Mail
+    dock:
+      state: absent
+  - name: Managed Software Center
+    dock:
+      state: absent
+  - name: Maps
+    dock:
+      state: absent      
+  - name: Messages
+    dock:
+      state: present
+      pos: 1
+    path: "/Applications/Messages.app"
+  - name: Microsoft Teams
     cask: microsoft-teams
-    dock: false
+    dock:
+      state: absent
     path: "/Applications/Microsoft Teams.app"
-  - name: "Postman"
+  - name: News
+    dock:
+      state: absent
+  - name: Notes
+    dock:
+      state: absent
+  - name: Numbers
+    dock:
+      state: absent
+  - name: Pages
+    dock:
+      state: absent
+  - name: Photos
+    dock:
+      state: absent      
+  - name: Postman
     cask: postman
-    dock: false
+    dock:
+      state: absent
     path: "/Applications/Postman.app"
-  - name: "Sonos"
+  - name: Reminders
+    dock:
+      state: absent
+  - name: Safari
+    dock:
+      state: absent      
+  - name: System Preferences
+    dock:
+      state: absent
+  - name: Sonos
     cask: sonos
-    dock: false
+    dock: 
+      state: present
+      pos: 7
     path: "/Applications/Sonos.app"
-  - name: "Virtual Box"
+  - name: Terminal
+    dock: 
+      state: present
+      pos: 4
+    path: "/Applications/Utilities/Terminal.app"
+  - name: TV
+    dock:
+      state: absent
+  - name: Virtual Box
     cask: virtualbox
-    dock: false
+    dock:
+      state: absent
     path: "/Applications/VirtualBox.app"
-  - name: "Visual Studio Code"
+  - name: Visual Studio Code
     cask: visual-studio-code
-    dock: true
+    dock: 
+      state: present
+      pos: 6
     path: "/Applications/Visual Studio Code.app"
-  - name: "VLC"
+  - name: VLC
     cask: vlc
-    dock: false
+    dock: 
+      state: absent
     path: "/Applications/VLC.app"
-  - name: "WhatsApp"
+  - name: WhatsApp
     cask: whatsapp
-    dock: false
+    dock: 
+      state: absent
     path: "/Applications/WhatsApp.app"
 
 install_fonts:
   - name: "Red Hat Fonts"
     cask: font-redhat
-
-homebrew_cask_packages:
-- brave-browser
-- dropbox
-- font-redhat
-- github
-- google-chrome
-- macs-fan-control
-- microsoft-teams
-- postman
-- signal
-- sonos
-- steam
-- virtualbox
-- visual-studio-code
-- vlc
-- whatsapp
-
-dockitems_to_remove:
-- Adobe Acrobat Reader DC
-- BlueJeans
-- Calendar
-- Contacts
-- Dropbox
-- FaceTime
-- iBooks
-- iTunes
-- Keynote
-- Launchpad
-- Mail
-- Managed Software Center
-- Maps
-- News
-- Notes
-- Numbers
-- Pages
-- Photos
-- Reminders
-- Safari
-- System Preferences
-- TV
-
-dockitems_to_persist:
-  - name: Messages
-    path: "/Applications/Messages.app"
-    pos: 1
-  - name: App Store
-    path: "/Applications/App Store.app"
-    pos: 2
-  - name: Google Chrome
-    path: "/Applications/Google Chrome.app"
-    pos: 3
-  - name: Terminal
-    path: "/Applications/Utilities/Terminal.app"
-    pos: 4
-  - name: GitHub Desktop
-    path: "/Applications/GitHub Desktop.app"
-    pos: 5
-  - name: Visual Studio Code
-    path: "/Applications/Visual Studio Code.app"
-    pos: 6
 
 mac_default_settings:
   - name: Mouse tracking speed

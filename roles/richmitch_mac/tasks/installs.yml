@@ -20,7 +20,8 @@
   homebrew_cask: 
     name: "{{ item.cask }}"
     state: latest
-  loop: "{{ install_apps }}"
+  loop: "{{ apps }}"
+  when: item.cask is defined
   tags:
     - brew
 
