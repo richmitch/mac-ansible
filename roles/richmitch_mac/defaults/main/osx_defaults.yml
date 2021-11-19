@@ -1,4 +1,4 @@
-mac_default_settings:
+osx_default_settings:
   - name: Mouse tracking speed
     domain: -g
     key: com.apple.mouse.scaling
@@ -8,21 +8,6 @@ mac_default_settings:
     domain: -g
     key: com.apple.swipescrolldirection
     type: bool
-    value: true
-  - name: Dock orientation
-    domain: 
-    key: com.apple.dock orientation
-    type: string
-    value: bottom
-  - name: Dock size
-    domain: 
-    key: com.apple.dock largesize
-    type: string
-    value: 90
-  - name: Dock autohide
-    domain: 
-    key: com.apple.dock autohide
-    type: string
     value: true
   - name: Finder preferred view style
     domain: 

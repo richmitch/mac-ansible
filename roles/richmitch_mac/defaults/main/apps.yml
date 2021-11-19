@@ -104,7 +104,7 @@ apps:
   - name: Sonos
     cask: sonos
     dock: 
-      state: present
+      state: absent
       pos: 7
     path: "/Applications/Sonos.app"
   - name: Terminal

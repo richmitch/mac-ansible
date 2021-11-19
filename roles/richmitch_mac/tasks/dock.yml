@@ -1,0 +1,38 @@
+- block:
+  - name: Remove Apps from Dock
+    shell: dockutil --remove '{{ item.name }}'
+    ignore_errors: true
+    with_items: '{{ apps }}'
+    when: item.dock.state == "absent"
+
+  - name: Add Apps to Dock
+    shell: dockutil --find '{{ item.name }}' || dockutil --add '{{ item.path }}'
+    with_items: '{{ apps }}'
+    when: item.dock.state == "present"
+
+  - name: Fix Dock order
+    shell: dockutil --move '{{ item.name }}' --position {{ item.dock.pos }}
+    with_items: '{{ apps }}'
+    when: item.dock.state == "present"
+
+  - name: Configure Dock appearance
+    osx_defaults: { domain: 'com.apple.dock', key: "{{ item.key }}", type: "{{ item.type }}", value: "{{ item.value }}" }
+    loop:
+      - { key: 'tilesize',                 type: 'float',   value: '{{ Dock_TileSize }}'}
+      - { key: 'magnification',            type: 'bool',    value: '{{ Dock_Magnification }}'}
+      - { key: 'largesize',                type: 'float',   value: '{{ Dock_LargeSize }}'}
+      - { key: 'orientation',              type: 'string',  value: '{{ Dock_Orientation }}'}
+      - { key: 'mineffect',                type: 'string',  value: '{{ Dock_MinEffect }}'}
+      - { key: 'AppleActionOnDoubleClick', type: 'string',  value: '{{ Dock_AppleActionOnDoubleClick }}'}
+      - { key: 'minimize-to-application',  type: 'boolean', value: '{{ Dock_MinimizeToApplication }}'}
+      - { key: 'launchanim',               type: 'boolean', value: '{{ Dock_LaunchAnim }}'}
+      - { key: 'autohide',                 type: 'bool',    value: '{{ Dock_Autohide }}'}
+      - { key: 'autohide-time-modifier',   type: 'int',     value: '{{ Dock_AutohideTimeModifier }}'}
+      - { key: 'show-process-indicators',  type: 'boolean', value: '{{ Dock_ShowProcessIndicators }}'}
+      - { key: 'showhidden',               type: 'boolean', value: '{{ Dock_ShowHidden }}'}
+      - { key: 'mouse-over-hilite-stack',  type: 'boolean', value: '{{ Dock_MouseOverHiliteStack }}'}
+      - { key: 'mod-count',                type: 'int',     value: '1'}
+      - { key: 'version',                  type: 'int',     value: '1'}
+      # set `version` and `mod-count` to '1' to prevent DockFixUp to be replace the whole Dock in case of a new user
+    when: item.value | string | length > 0
+  notify: Restart Dock

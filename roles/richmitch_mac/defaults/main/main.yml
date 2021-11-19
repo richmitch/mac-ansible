@@ -3,6 +3,7 @@ do_homebrew_packages: yes
 do_homebrew_casks:    yes
 do_homebrew_fonts:    yes
 
-do_installs:        yes
-do_tidy:            yes
-do_appdefaults:     yes
+do_dock:              yes
+do_osx_defaults:      yes
+do_hot_corners:       yes
+do_app_defaults:      yes
