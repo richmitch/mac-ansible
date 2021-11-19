@@ -1,0 +1,138 @@
+apps:
+  - name: Adobe Acrobat Reader DC
+    dock:
+      state: absent
+  - name: App Store
+    dock:
+      state: present
+      pos: 2
+    path: "/Applications/App Store.app"
+  - name: BlueJeans
+    dock:
+      state: absent    
+  - name: Brave Browser
+    cask: brave-browser
+    dock:
+      state: present
+      pos: 3
+    path: "/Applications/Brave Browser.app"
+  - name: Calendar
+    dock:
+      state: absent
+  - name: Contacts
+    dock:
+      state: absent      
+  - name: Dropbox
+    cask: dropbox
+    dock: 
+      state: absent
+    path: "/Applications/Dropbox.app"
+  - name: Facetime
+    dock:
+      state: absent
+  - name: GitHub Desktop
+    cask: github
+    dock:
+      state: present
+      pos: 5
+    path: "/Applications/GitHub Desktop.app"
+  - name: Google Chrome
+    cask: google-chrome
+    dock: 
+      state: absent
+    path: "/Applications/Google Chrome.app"
+  - name: iBooks
+    dock:
+      state: absent
+  - name: iTunes
+    dock:
+      state: absent
+  - name: Keynote
+    dock:
+      state: absent
+  - name: Launchpad
+    dock:
+      state: absent
+  - name: Mail
+    dock:
+      state: absent
+  - name: Managed Software Center
+    dock:
+      state: absent
+  - name: Maps
+    dock:
+      state: absent      
+  - name: Messages
+    dock:
+      state: present
+      pos: 1
+    path: "/Applications/Messages.app"
+  - name: Microsoft Teams
+    cask: microsoft-teams
+    dock:
+      state: absent
+    path: "/Applications/Microsoft Teams.app"
+  - name: News
+    dock:
+      state: absent
+  - name: Notes
+    dock:
+      state: absent
+  - name: Numbers
+    dock:
+      state: absent
+  - name: Pages
+    dock:
+      state: absent
+  - name: Photos
+    dock:
+      state: absent      
+  - name: Postman
+    cask: postman
+    dock:
+      state: absent
+    path: "/Applications/Postman.app"
+  - name: Reminders
+    dock:
+      state: absent
+  - name: Safari
+    dock:
+      state: absent      
+  - name: System Preferences
+    dock:
+      state: absent
+  - name: Sonos
+    cask: sonos
+    dock: 
+      state: present
+      pos: 7
+    path: "/Applications/Sonos.app"
+  - name: Terminal
+    dock: 
+      state: present
+      pos: 4
+    path: "/Applications/Utilities/Terminal.app"
+  - name: TV
+    dock:
+      state: absent
+  - name: Virtual Box
+    cask: virtualbox
+    dock:
+      state: absent
+    path: "/Applications/VirtualBox.app"
+  - name: Visual Studio Code
+    cask: visual-studio-code
+    dock: 
+      state: present
+      pos: 6
+    path: "/Applications/Visual Studio Code.app"
+  - name: VLC
+    cask: vlc
+    dock: 
+      state: absent
+    path: "/Applications/VLC.app"
+  - name: WhatsApp
+    cask: whatsapp
+    dock: 
+      state: absent
+    path: "/Applications/WhatsApp.app"

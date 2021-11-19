@@ -1,0 +1,8 @@
+
+- name: Install homebrew packages
+  homebrew:
+    name: "{{ item }}"
+    state: latest
+  loop: "{{ homebrew_packages }}"
+  tags:
+    - brew

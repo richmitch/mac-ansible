@@ -22,3 +22,10 @@
     dest: "{{ homebrew_brew_bin_path }}/brew"
     state: link
   when: not homebrew_binary.stat.exists
+
+- name: Update homebrew by reinstalling git
+  homebrew:
+    name: git
+    state: latest
+    update_homebrew: yes
+  when: do_homebrew_update | bool

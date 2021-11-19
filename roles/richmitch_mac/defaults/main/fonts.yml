@@ -1,0 +1,3 @@
+fonts:
+  - name: "Red Hat Fonts"
+    cask: font-redhat
