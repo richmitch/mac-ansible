@@ -9,3 +9,4 @@
 - { include: hot_corners.yml,   tags: "hot_corners",  when: do_hot_corners|bool }
 - { include: osx_defaults.yml,  tags: "osx_defaults", when: do_osx_defaults|bool }
 - { include: app_defaults.yml,  tags: "app_defaults", when: do_app_defaults|bool }
+- { include: network.yml,       tags: "network",      when: do_network|bool}

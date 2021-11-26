@@ -1,0 +1,4 @@
+
+
+- name: Set DNS entries on WiFi network
+  shell: networksetup -setdnsservers {{ Network_WiFiNetworkName }} {{ Network_WiFiDNSServers }}

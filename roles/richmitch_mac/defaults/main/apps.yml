@@ -1,4 +1,9 @@
 apps:
+  - name: 1Password 7
+    dock:
+      state: present
+      pos: 7
+    path: "/Applications/1Password 7.app"
   - name: Adobe Acrobat Reader DC
     dock:
       state: absent
