@@ -1,0 +1,10 @@
+do_homebrew_setup:    yes
+do_homebrew_packages: yes
+do_homebrew_casks:    yes
+do_homebrew_fonts:    yes
+
+do_dock:              yes
+do_osx_defaults:      yes
+do_hot_corners:       yes
+do_app_defaults:      yes
+do_network:           yes

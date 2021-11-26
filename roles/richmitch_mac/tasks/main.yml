@@ -1,16 +1,12 @@
 # roles/richmitch_mac/tasks/main.yml
+---
+- { include: homebrew.yml,      tags: "homebrew",     when: do_homebrew_setup|bool }
 
-- name: Do prereqs
-  import_tasks: prereqs.yml
+- { include: packages.yml,      tags: "packages",     when: do_homebrew_packages|bool }
+- { include: casks.yml,         tags: "casks",        when: do_homebrew_casks|bool }
 
-- name: Install things
-  import_tasks: installs.yml
-  when: do_installs
-  
-- name: Tidy things up how I like them
-  import_tasks: tidy.yml
-  when: do_tidy
-
-- name: Set app defaults
-  import_tasks: app-defaults.yml
-  when: do_appdefaults
+- { include: dock.yml,          tags: "dock",         when: do_dock|bool }
+- { include: hot_corners.yml,   tags: "hot_corners",  when: do_hot_corners|bool }
+- { include: osx_defaults.yml,  tags: "osx_defaults", when: do_osx_defaults|bool }
+- { include: app_defaults.yml,  tags: "app_defaults", when: do_app_defaults|bool }
+- { include: network.yml,       tags: "network",      when: do_network|bool}

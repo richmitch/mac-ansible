@@ -1,0 +1,4 @@
+homebrew_packages:
+- maven
+- node@16
+- openjdk

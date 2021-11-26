@@ -1,0 +1,26 @@
+osx_default_settings:
+  - name: Mouse tracking speed
+    domain: -g
+    key: com.apple.mouse.scaling
+    type: float
+    value: 5.0
+  - name: Scroll direction
+    domain: -g
+    key: com.apple.swipescrolldirection
+    type: bool
+    value: true
+  - name: Finder preferred view style
+    domain: 
+    key: com.apple.finder FXPreferredViewStyle
+    type: string
+    value: Nlsv
+  - name: Finder preferred Group By
+    domain: 
+    key: com.apple.finder FXPreferredGroupBy
+    type: string
+    value: "Date Modified"
+  - name: Finder arrange Group By
+    domain: 
+    key: com.apple.finder FXArrangeGroupViewBy
+    type: string
+    value: "Date Modified"

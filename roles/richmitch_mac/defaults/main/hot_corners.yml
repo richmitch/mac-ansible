@@ -1,0 +1,41 @@
+---
+
+HotCorners_BottomLeftModifier: "Disabled"         # Enabled, Disabled
+HotCorners_BottomRightModifier: "Enabled"         # Enabled, Disabled
+HotCorners_TopLeftModifier: "Disabled"            # Enabled, Disabled
+HotCorners_TopRightModifier: "Enabled"            # Enabled, Disabled
+
+HotCorners_BottomLeftAction: "Disabled"           # Chose one of the availlable actions
+HotCorners_BottomRightAction: "Mission Control"   # Chose one of the availlable actions
+HotCorners_TopLeftAction: "Disabled"              # Chose one of the availlable actions
+HotCorners_TopRightAction: "Lock Screen"          # Chose one of the availlable actions
+
+HotCorners_AvailableModifiers:
+  - { name: "Enabled", value: 0 }
+  - { name: "Disabled", value: 1048576 }
+
+HotCorners_AvailableActions:
+  - { name: "no-op", value: 0 }
+  - { name: "Disabled", value: 1 }
+  - { name: "Mission Control", value: 2 }
+  - { name: "Show Application Windows", value: 3 }
+  - { name: "Desktop", value: 4 }
+  - { name: "Start Screen Saver", value: 5 }
+  - { name: "Disable Screen Saver", value: 6 }
+  - { name: "Dashboard", value: 7 }
+  - { name: "Put Display To Sleep", value: 10 }
+  - { name: "Launchpad", value: 11 }
+  - { name: "Notification Center", value: 12 }
+  - { name: "lock Screen", value: 13 }
+
+HotCorners_Modifiers:
+  - { description: 'Bottom Left',  key: 'wvous-bl-modifier', value: "{{ HotCorners_AvailableModifiers }}"}
+  - { description: 'Bottom Right', key: 'wvous-br-modifier', value: "{{ HotCorners_AvailableModifiers }}"}
+  - { description: 'Top Left',     key: 'wvous-tl-modifier', value: "{{ HotCorners_AvailableModifiers }}"}
+  - { description: 'Top Right',    key: 'wvous-tr-modifier', value: "{{ HotCorners_AvailableModifiers }}"}
+
+HotCorners_Actions:
+  - { description: 'Bottom Left',  key: 'wvous-bl-corner', value: "{{ HotCorners_AvailableActions }}"}
+  - { description: 'Bottom Right', key: 'wvous-br-corner', value: "{{ HotCorners_AvailableActions }}"}
+  - { description: 'Top Left',     key: 'wvous-tl-corner', value: "{{ HotCorners_AvailableActions }}"}
+  - { description: 'Top Right',    key: 'wvous-tr-corner', value: "{{ HotCorners_AvailableActions }}"}

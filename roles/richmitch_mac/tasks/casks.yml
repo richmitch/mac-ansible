@@ -1,0 +1,11 @@
+- name: Install homebrew cask packages
+  homebrew_cask: 
+    name: "{{ item.cask }}"
+    state: latest
+  loop: "{{ apps }}"
+  when: item.cask is defined
+  tags:
+    - brew
+
+- name: homebrew cleanup
+  command: brew cleanup
