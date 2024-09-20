@@ -114,9 +114,13 @@ apps:
     path: "/Applications/Sonos.app"
   - name: Terminal
     dock: 
+      state: absent
+    path: "/Applications/Utilities/Terminal.app"
+  - name: Tabby
+    dock: 
       state: present
       pos: 4
-    path: "/Applications/Utilities/Terminal.app"
+    path: "/Applications/Utilities/Tabby.app"    
   - name: TV
     dock:
       state: absent
