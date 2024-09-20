@@ -4,37 +4,22 @@ apps:
       state: present
       pos: 7
     path: "/Applications/1Password.app"
-  - name: Adobe Acrobat Reader DC
-    dock:
-      state: absent
   - name: App Store
     dock:
       state: present
       pos: 2
-    path: "/Applications/App Store.app"
-  - name: BlueJeans
-    dock:
-      state: absent    
+    path: "/Applications/App Store.app" 
   - name: Brave Browser
     cask: brave-browser
     dock:
       state: present
       pos: 3
-    path: "/Applications/Brave Browser.app"
-  - name: Calendar
-    dock:
-      state: absent
-  - name: Contacts
-    dock:
-      state: absent      
+    path: "/Applications/Brave Browser.app"     
   - name: Dropbox
     cask: dropbox
     dock: 
       state: absent
     path: "/Applications/Dropbox.app"
-  - name: Facetime
-    dock:
-      state: absent
   - name: GitHub Desktop
     cask: github
     dock:
@@ -45,90 +30,24 @@ apps:
     cask: google-chrome
     dock: 
       state: absent
-    path: "/Applications/Google Chrome.app"
-  - name: iBooks
-    dock:
-      state: absent
-  - name: iTunes
-    dock:
-      state: absent
-  - name: Keynote
-    dock:
-      state: absent
-  - name: Launchpad
-    dock:
-      state: absent
-  - name: Mail
-    dock:
-      state: absent
-  - name: Managed Software Center
-    dock:
-      state: absent
-  - name: Maps
-    dock:
-      state: absent      
+    path: "/Applications/Google Chrome.app"     
   - name: Messages
     dock:
       state: present
       pos: 1
     path: "/Applications/Messages.app"
-  - name: Microsoft Teams
-    cask: microsoft-teams
-    dock:
-      state: absent
-    path: "/Applications/Microsoft Teams.app"
-  - name: News
-    dock:
-      state: absent
-  - name: Notes
-    dock:
-      state: absent
-  - name: Numbers
-    dock:
-      state: absent
-  - name: Pages
-    dock:
-      state: absent
-  - name: Photos
-    dock:
-      state: absent      
-  - name: Postman
-    cask: postman
-    dock:
-      state: absent
-    path: "/Applications/Postman.app"
-  - name: Reminders
-    dock:
-      state: absent
-  - name: Safari
-    dock:
-      state: absent      
-  - name: System Preferences
-    dock:
-      state: absent
   - name: Sonos
     cask: sonos
     dock: 
       state: absent
       pos: 7
     path: "/Applications/Sonos.app"
-  - name: Terminal
-    dock: 
-      state: absent
-    path: "/Applications/Utilities/Terminal.app"
   - name: Tabby
+    cask: tabby
     dock: 
       state: present
       pos: 4
     path: "/Applications/Utilities/Tabby.app"    
-  - name: TV
-    dock:
-      state: absent
-  - name: Virtual Box
-    cask: virtualbox
-    dock:
-      state: absent
-    path: "/Applications/VirtualBox.app"
   - name: Visual Studio Code
     cask: visual-studio-code
     dock: 
@@ -144,4 +63,76 @@ apps:
     cask: whatsapp
     dock: 
       state: absent
-    path: "/Applications/WhatsApp.app"
+    path: "/Applications/WhatsApp.app"    
+  - name: Adobe Acrobat Reader DC
+    dock:
+      state: absent     
+  - name: BlueJeans
+    dock:
+      state: absent         
+  - name: Calendar
+    dock:
+      state: absent      
+  - name: Contacts
+    dock:
+      state: absent 
+  - name: Facetime
+    dock:
+      state: absent      
+  - name: Journal
+    dock:
+      state: absent
+  - name: Keynote
+    dock:
+      state: absent      
+  - name: Launchpad
+    dock:
+      state: absent      
+  - name: Mail
+    dock:
+      state: absent        
+  - name: Managed Software Center
+    dock:
+      state: absent  
+  - name: Maps
+    dock:
+      state: absent      
+  - name: Music
+    dock:
+      state: absent
+  - name: News
+    dock:
+      state: absent
+  - name: Notes
+    dock:
+      state: absent         
+  - name: Numbers
+    dock:
+      state: absent
+  - name: Pages
+    dock:
+      state: absent
+  - name: Photos
+    dock:
+      state: absent
+  - name: Red Hat Printer Setup
+    dock:
+      state: absent  
+  - name: Red Hat Mac Info
+    dock:
+      state: absent  
+  - name: Reminders
+    dock:
+      state: absent      
+  - name: Safari
+    dock:
+      state: absent      
+  - name: System Preferences
+    dock:
+      state: absent 
+  - name: Terminal
+    dock: 
+      state: absent      
+  - name: TV
+    dock:
+      state: absent      
