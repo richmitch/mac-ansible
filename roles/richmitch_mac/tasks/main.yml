@@ -1,12 +1,12 @@
 # roles/richmitch_mac/tasks/main.yml
 ---
-- { include: homebrew.yml,      tags: "homebrew",     when: do_homebrew_setup|bool }
+- { ansible.built_in.include_tasks: homebrew.yml,      tags: "homebrew",     when: do_homebrew_setup|bool }
 
-- { include: packages.yml,      tags: "packages",     when: do_homebrew_packages|bool }
-- { include: casks.yml,         tags: "casks",        when: do_homebrew_casks|bool }
+- { ansible.built_in.include_tasks: packages.yml,      tags: "packages",     when: do_homebrew_packages|bool }
+- { ansible.built_in.include_tasks: casks.yml,         tags: "casks",        when: do_homebrew_casks|bool }
 
-- { include: dock.yml,          tags: "dock",         when: do_dock|bool }
-- { include: hot_corners.yml,   tags: "hot_corners",  when: do_hot_corners|bool }
-- { include: osx_defaults.yml,  tags: "osx_defaults", when: do_osx_defaults|bool }
-- { include: app_defaults.yml,  tags: "app_defaults", when: do_app_defaults|bool }
-- { include: network.yml,       tags: "network",      when: do_network|bool}
+- { ansible.built_in.include_tasks: dock.yml,          tags: "dock",         when: do_dock|bool }
+- { ansible.built_in.include_tasks: hot_corners.yml,   tags: "hot_corners",  when: do_hot_corners|bool }
+- { ansible.built_in.include_tasks: osx_defaults.yml,  tags: "osx_defaults", when: do_osx_defaults|bool }
+- { ansible.built_in.include_tasks: app_defaults.yml,  tags: "app_defaults", when: do_app_defaults|bool }
+- { ansible.built_in.include_tasks: network.yml,       tags: "network",      when: do_network|bool}
