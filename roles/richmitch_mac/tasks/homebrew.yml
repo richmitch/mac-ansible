@@ -10,6 +10,7 @@
     group: "{{ homebrew_group }}"
     state: directory
     mode: 0775
+  become: true
 
 - name: Check if homebrew binary is already in place.
   stat: "path={{ homebrew_brew_bin_path }}/brew"
