@@ -1,10 +1,8 @@
 # roles/richmitch_mac/tasks/main.yml
 ---
 - { ansible.builtin.include_tasks: homebrew.yml,      tags: "homebrew",     when: do_homebrew_setup|bool }
-
 - { ansible.builtin.include_tasks: packages.yml,      tags: "packages",     when: do_homebrew_packages|bool }
 - { ansible.builtin.include_tasks: casks.yml,         tags: "casks",        when: do_homebrew_casks|bool }
-
 - { ansible.builtin.include_tasks: dock.yml,          tags: "dock",         when: do_dock|bool }
 - { ansible.builtin.include_tasks: hot_corners.yml,   tags: "hot_corners",  when: do_hot_corners|bool }
 - { ansible.builtin.include_tasks: osx_defaults.yml,  tags: "osx_defaults", when: do_osx_defaults|bool }
