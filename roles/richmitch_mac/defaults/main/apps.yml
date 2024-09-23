@@ -1,5 +1,6 @@
 apps:
   - name: 1Password
+    cask: 1password
     dock:
       state: present
       pos: 7
