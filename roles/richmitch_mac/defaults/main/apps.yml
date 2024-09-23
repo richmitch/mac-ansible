@@ -76,10 +76,10 @@ apps:
   - name: Contacts
     dock:
       state: absent 
-  - name: Facetime
+  - name: FaceTime
     dock:
       state: absent      
-  - name: Journal
+  - name: Freeform
     dock:
       state: absent
   - name: Keynote
