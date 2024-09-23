@@ -28,7 +28,6 @@ apps:
       pos: 5
     path: "/Applications/GitHub Desktop.app"
   - name: Google Chrome
-    cask: google-chrome
     dock: 
       state: absent
     path: "/Applications/Google Chrome.app"     
