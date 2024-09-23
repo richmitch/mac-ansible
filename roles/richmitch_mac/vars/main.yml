@@ -1,9 +1,8 @@
 do_homebrew_setup:    no
-do_homebrew_packages: no
-do_homebrew_casks:    no
-
-do_dock:              no
-do_hot_corners:       no
-do_osx_defaults:      no
-do_app_defaults:      no
+do_homebrew_packages: yes
+do_homebrew_casks:    yes
+do_dock:              yes
+do_hot_corners:       yes
+do_osx_defaults:      yes
+do_app_defaults:      yes
 do_network:           yes
