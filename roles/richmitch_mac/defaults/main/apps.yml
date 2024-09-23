@@ -39,7 +39,7 @@ apps:
   - name: Sonos
     cask: sonos
     dock: 
-      state: absent
+      state: present
       pos: 7
     path: "/Applications/Sonos.app"
   - name: Tabby
